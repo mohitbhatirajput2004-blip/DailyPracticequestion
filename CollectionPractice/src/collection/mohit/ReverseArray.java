@@ -13,7 +13,8 @@ public class ReverseArray {
 			int temp=arr[i];
 			arr[i]=arr[n-1-i];
 			arr[n-1-i]=temp;
-		
+	
+			
 		}
 		System.out.println("\nReverse Array : ");
 		for(int ele : arr) {

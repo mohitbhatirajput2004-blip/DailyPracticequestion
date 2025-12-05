@@ -22,11 +22,31 @@ public class TwoDArray {
 
 				
 		for(int i=0;i<r;i++) {
+			for(int j=i;j<col;j++) {
+				int temp=arr[i][j];
+				arr[i][j]=arr[j][i];
+				arr[j][i]=temp;
+			}
+		}
+		int k=col-1;
+		for(int i=0;i<r&&i<k;i++) {
+			
+			for(int j=0;j<col;j++) {
+			int temp = arr[j][i];
+			arr[j][i]=arr[j][k];
+			arr[j][k]=temp;
+			}
+			k--;
+		}
+		
+		System.out.println("90DEG ROTATED ARRAY IS : ");
+		for(int i=0;i<r;i++) {
 			for(int j=0;j<col;j++) {
 				System.out.print(arr[i][j] + " ");
 			}
 			System.out.println();
 		}
+		
 		
 	}
 }
