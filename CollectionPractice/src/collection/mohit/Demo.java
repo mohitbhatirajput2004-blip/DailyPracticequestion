@@ -8,15 +8,27 @@ enum Weekdays{
 public class Demo {
 	
 	public static void main(String[] args) {
+		String s1 ="1236";
+		String s2 = new String("1236");
 		
-		Weekdays [] data =Weekdays.values();
-		for(Weekdays w: data) {
-			System.out.println(w);
+		if(s1 == s2) {
+			
+			System.out.println("True");
 		}
+		else {
+			System.out.println("false");
+		}	
+		s1 = s2.intern();
+         if(s1 == s2) {
+			
+			System.out.println("True ref");
+		}
+		else {
+			System.out.println("false");
+		}	
 	}
-	
-	
-	
-	
- 
 }
+
+
+
+
