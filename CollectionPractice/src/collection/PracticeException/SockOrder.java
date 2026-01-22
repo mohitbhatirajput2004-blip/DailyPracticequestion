@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 public class SockOrder {
 	void OrderAmount(int num) {
-		if(num >= 500) {
+		if(num >= 500){
 			System.out.println("Order Confirmed");
 		}
-		else {
+		else{
 			throw new CustomException("Order Amount Low");
 		}
 	}
